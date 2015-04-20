@@ -1,5 +1,5 @@
 
-## FOXEL Laboratory of Certification <br /> Research in geodetic certification
+## Laboratory of Certification <br /> Research in geodetic certification
 
 <p align="justify">
 </p>
