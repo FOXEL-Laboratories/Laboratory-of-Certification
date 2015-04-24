@@ -37,6 +37,36 @@
 
     function dm_storage_d( dm_measure_path )
 
-        
+        % Import measures %
+        dm_meas = load( dm_measure_path );
+
+        % Create linear system vectors %
+        dm_n = dm_meas(:,1);
+        dm_s = dm_meas(:,2) / 1024;
+
+        % Estimate model parameter %
+        dm_p = dm_n \ dm_s;
+
+        % Display parameter %
+        printf( 'Estimated parameter : %f\n', dm_p / 2 );
+
+        % Plot configuration %
+        figure
+        hold on;
+        grid on;
+        box  on;
+
+        % Display measure points %
+        plot( dm_n, dm_s, '+r', 'MarkerSize', 8 );
+
+        % Display model %
+        plot( [ min(dm_n), max(dm_n) ], [ min(dm_n), max(dm_n) ] * dm_p, '-r', 'LineWidth', 2 );
+
+        % Axis labels %
+        xlabel( 'Captures' );
+        ylabel( 'Storage cost [Go]' );
+
+        % Export plot in color EPS format %
+        print( '-depsc', '-F:12', [ '../dev/plots/storage_d.eps' ] );
 
     end
