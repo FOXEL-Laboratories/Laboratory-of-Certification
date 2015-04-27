@@ -45,11 +45,8 @@
         dm_c = dm_meas(:,2);
         dm_t = dm_meas(:,3);
 
-        % Compute linear system matrix %
-        dm_m = ( 1 ./ dm_c' ) .* [ dm_n' .^ 2; dm_n' ];
-
         % Estimate model parameter %
-        dm_p = dm_m' \ dm_t;
+        dm_p = [ ( dm_n' .^ 2 ) ./ dm_c'; ( dm_n' ) ./ dm_c' ]' \ dm_t;
 
         % Display parameter %
         printf( 'Estimated parameter : %f %f\n', dm_p( 1 ), dm_p( 2 ) );
@@ -64,8 +61,8 @@
                 % Create function %
                 dm_f( dm_xx, dm_yy ) = ( 1 ./ dm_y( dm_yy ) ) * ( ...
 
-                    dm_p(1) * dm_x( dm_xx ) .^3 + ...
-                    dm_p(2) * dm_x( dm_xx ) .^2   ...
+                    dm_p(1) * dm_x( dm_xx ) .^2 + ...
+                    dm_p(2) * dm_x( dm_xx )       ...
 
                 );
 
