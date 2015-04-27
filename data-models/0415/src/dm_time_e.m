@@ -51,4 +51,39 @@
         % Display parameter %
         printf( 'Estimated parameter : %f\n', dm_p );
 
+        % Create mapping axis %
+        dm_x = linspace( min( dm_n ), max( dm_n ), ( max( dm_n ) - min( dm_n ) ) * 8 );
+        dm_y = linspace( min( dm_c ), max( dm_c ), ( max( dm_c ) - min( dm_c ) ) * 8 );
+
+        % Create mapping %
+        for dm_xx = 1 : length( dm_x ); for dm_yy = 1 : length( dm_y )
+
+                % Create function %
+                dm_f( dm_xx, dm_yy ) = dm_p * ( dm_x( dm_xx ) / dm_y( dm_yy ) );
+
+        end; end
+
+        % Plot configuration %
+        figure
+        hold on;
+        grid on;
+        box  on;
+
+        % Display measure points %
+        stem3( dm_n, dm_c, dm_t, 'r', 'Filled', 'LineWidth', 2 );
+
+        % Display model %
+        surf( dm_x, dm_y, dm_f', 'EdgeColor', 'None' ); colormap( jet );
+
+        % Set viewport %
+        view( [ 180 + 45, 25 ] );
+
+        % Axis labels %
+        xlabel( 'Captures' );
+        ylabel( 'Threads' );
+        zlabel( 'Time [s]' );
+
+        % Export plot in color EPS format %
+        print( '-depsc', '-F:12', [ '../dev/plots/time_e.eps' ] );
+
     end
