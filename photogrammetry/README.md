@@ -1,5 +1,5 @@
 
-## Laboratory of Certification <br /> Data models department - FDM0415
+## Laboratory of Certification <br /> Photogrammetry department
 
 <p align="justify">
 </p>
