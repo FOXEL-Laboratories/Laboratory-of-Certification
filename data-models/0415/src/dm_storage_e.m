@@ -35,7 +35,7 @@
     %      You are required to attribute the work as explained in the "Usage and
     %      Attribution" section of <http://foxel.ch/license>.
 
-    function dm_storage_d( dm_measure_path )
+    function dm_storage_e( dm_measure_path )
 
         % Import measures %
         dm_meas = load( dm_measure_path );
