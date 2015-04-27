@@ -57,7 +57,7 @@
         box  on;
 
         % Display measure points %
-        plot( dm_n, dm_s, '+r', 'MarkerSize', 8 );
+        stem( dm_n, dm_s, 'ko', 'Filled', 'LineWidth', 2, 'LineStyle', ':', 'MarkerFaceColor','k', 'MarkerEdgeColor','w' );
 
         % Display model %
         plot( [ min(dm_n), max(dm_n) ], [ min(dm_n), max(dm_n) ] * dm_p, '-r', 'LineWidth', 2 );
@@ -67,6 +67,6 @@
         ylabel( 'Storage cost [Go]' );
 
         % Export plot in color EPS format %
-        print( '-depsc', '-F:12', [ '../dev/plots/storage_d3.eps' ] );
+        print( '-depsc', '-F:12', [ '../dev/plots/storage_d.eps' ] );
 
     end
