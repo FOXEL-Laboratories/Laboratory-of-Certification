@@ -1,5 +1,5 @@
 
-## FOXEL Laboratories<br />Certification
+## Laboratory of Certification <br /> Photogrammetry department - PG0415
 
 <p align="justify">
 The research on certification conducted in the FOXEL laboratories is committed to the crucial question of certification of the geopositioned photogrammtric results. The objective of this research is to define and apply a procedure of certification based on well-established land register data of the photogrammtric results attached to earth. The research on certification is the fondation on which FOXEL rely to ensure the quality of its results.
