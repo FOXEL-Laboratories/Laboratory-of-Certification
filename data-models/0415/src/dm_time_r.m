@@ -73,7 +73,7 @@
         stem3( dm_n, dm_c, dm_t, 'ko', 'Filled', 'LineWidth', 2, 'LineStyle',':', 'MarkerFaceColor','k', 'MarkerEdgeColor','w' );
 
         % Display model %
-        surf( dm_x, dm_y, dm_f', 'EdgeColor', 'None' ); colormap( jet );
+        surf( dm_x, dm_y, dm_f', 'EdgeColor', 'None', 'FaceColor', 'Interp' ); colormap( jet );
 
         % Set viewport %
         view( [ 180 + 45, 25 ] );

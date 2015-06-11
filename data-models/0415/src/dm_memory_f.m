@@ -73,7 +73,7 @@
         stem3( dm_n, dm_c, dm_m, 'ko', 'Filled', 'LineWidth', 2, 'LineStyle',':', 'MarkerFaceColor','k', 'MarkerEdgeColor','w' );
 
         % Display model %
-        surf( dm_x, dm_y, dm_f', 'EdgeColor', 'None' ); colormap( jet );
+        surf( dm_x, dm_y, dm_f', 'EdgeColor', 'None', 'FaceColor', 'Interp' ); colormap( jet );
 
         % Set viewport %
         view( [ 180 + 45, 25 ] );
@@ -82,6 +82,12 @@
         xlabel( 'Captures' );
         ylabel( 'Threads' );
         zlabel( 'Time [s]' );
+
+        % Define plot export parameters %
+        set( gcf, 'PaperUnits', 'centimeters' );
+        set( gcf, 'PaperSize', [20 10] );
+        set( gcf, 'PaperPositionMode', 'manual' );
+        set( gcf, 'PaperPosition', [0 0 20 10] );
 
         % Export plot in color EPS format %
         print( '-depsc', '-F:12', [ '../dev/plots/memory_f.eps' ] );
