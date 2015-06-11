@@ -43,7 +43,7 @@
         % Create linear system vectors %
         dm_n = dm_meas(:,1);
         dm_c = dm_meas(:,2);
-        dm_m = dm_meas(:,3);
+        dm_m = dm_meas(:,3) / 1024;
 
         % Estimate model parameter %
         dm_p = ( dm_n .* dm_c ) \ dm_m;
@@ -79,9 +79,9 @@
         view( [ 180 + 45, 25 ] );
 
         % Axis labels %
-        xlabel( 'Captures' );
-        ylabel( 'Threads' );
-        zlabel( 'Time [s]' );
+        xlabel( 'Threads' );
+        ylabel( 'Captures' );
+        zlabel( 'Memory [Go]' );
 
         % Define plot export parameters %
         set( gcf, 'PaperUnits', 'centimeters' );
