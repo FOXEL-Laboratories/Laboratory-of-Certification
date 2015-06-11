@@ -43,7 +43,7 @@
         % Create linear system vectors %
         dm_n = dm_meas(:,1);
         dm_c = dm_meas(:,2);
-        dm_m = dm_meas(:,3);
+        dm_m = dm_meas(:,3) + dm_meas(:,4);
 
         % Estimate model parameter %
         dm_p = ( dm_n .* dm_c ) \ dm_m;
@@ -82,6 +82,12 @@
         xlabel( 'Captures' );
         ylabel( 'Threads' );
         zlabel( 'Time [s]' );
+
+        % Define plot export parameters %
+        set( gcf, 'PaperUnits', 'centimeters' );
+        set( gcf, 'PaperSize', [20 10] );
+        set( gcf, 'PaperPositionMode', 'manual' );
+        set( gcf, 'PaperPosition', [0 0 20 10] );
 
         % Export plot in color EPS format %
         print( '-depsc', '-F:12', [ '../dev/plots/memory_s.eps' ] );

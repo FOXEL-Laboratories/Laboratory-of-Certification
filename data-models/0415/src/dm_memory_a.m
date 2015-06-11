@@ -66,6 +66,12 @@
         xlabel( 'Threads' );
         ylabel( 'Memory usage [Go]' );
 
+        % Define plot export parameters %
+        set( gcf, 'PaperUnits', 'centimeters' );
+        set( gcf, 'PaperSize', [20 10] );
+        set( gcf, 'PaperPositionMode', 'manual' );
+        set( gcf, 'PaperPosition', [0 0 20 10] );
+
         % Export plot in color EPS format %
         print( '-depsc', '-F:12', [ '../dev/plots/memory_a.eps' ] );
 

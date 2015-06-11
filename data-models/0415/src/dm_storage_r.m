@@ -42,7 +42,7 @@
 
         % Create linear system vectors %
         dm_n = dm_meas(:,1);
-        dm_s = dm_meas(:,2) / 1024 / 1024;
+        dm_s = ( dm_meas(:,2) + dm_meas(:,3) ) / 1024 / 1024;
 
         % Estimate model parameter %
         dm_p = dm_n \ dm_s;
