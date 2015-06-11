@@ -42,7 +42,7 @@
 
         % Create linear system vectors %
         dm_n = dm_meas(:,1);
-        dm_s = dm_meas(:,2) / 1024;
+        dm_s = dm_meas(:,2) / 1024 / 1024;
 
         % Estimate model parameter %
         dm_p = dm_n \ dm_s;
@@ -65,6 +65,12 @@
         % Axis labels %
         xlabel( 'Captures' );
         ylabel( 'Storage cost [Go]' );
+
+        % Define plot export parameters %
+        set( gcf, 'PaperUnits', 'centimeters' );
+        set( gcf, 'PaperSize', [20 10] );
+        set( gcf, 'PaperPositionMode', 'manual' );
+        set( gcf, 'PaperPosition', [0 0 20 10] );
 
         % Export plot in color EPS format %
         print( '-depsc', '-F:12', [ '../dev/plots/storage_a.eps' ] );

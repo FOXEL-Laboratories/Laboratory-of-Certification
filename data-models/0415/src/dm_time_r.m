@@ -35,7 +35,7 @@
     %      You are required to attribute the work as explained in the "Usage and
     %      Attribution" section of <http://foxel.ch/license>.
 
-    function dm_time_e( dm_measure_path )
+    function dm_time_r( dm_measure_path )
 
         % Import measures %
         dm_meas = load( dm_measure_path );
@@ -82,6 +82,12 @@
         xlabel( 'Captures' );
         ylabel( 'Threads' );
         zlabel( 'Time [s]' );
+
+        % Define plot export parameters %
+        set( gcf, 'PaperUnits', 'centimeters' );
+        set( gcf, 'PaperSize', [20 10] );
+        set( gcf, 'PaperPositionMode', 'manual' );
+        set( gcf, 'PaperPosition', [0 0 20 10] );
 
         % Export plot in color EPS format %
         print( '-depsc', '-F:12', [ '../dev/plots/time_r.eps' ] );
