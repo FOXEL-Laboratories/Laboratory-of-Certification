@@ -52,8 +52,8 @@
         printf( 'Estimated parameter : %f %f\n', dm_p( 1 ), dm_p( 2 ) );
 
         % Create mapping axis %
-        dm_x = linspace( min( dm_n ), max( dm_n ), ( max( dm_n ) - min( dm_n ) ) * 8 );
-        dm_y = linspace( min( dm_c ), max( dm_c ), ( max( dm_c ) - min( dm_c ) ) * 8 );
+        dm_x = linspace( min( dm_n ), max( dm_n ), ( max( dm_n ) - min( dm_n ) ) * 2 );
+        dm_y = linspace( min( dm_c ), max( dm_c ), ( max( dm_c ) - min( dm_c ) ) * 2 );
 
         % Create mapping %
         for dm_xx = 1 : length( dm_x ); for dm_yy = 1 : length( dm_y )
