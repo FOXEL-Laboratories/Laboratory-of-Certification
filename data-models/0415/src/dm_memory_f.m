@@ -52,8 +52,8 @@
         printf( 'Estimated parameter : %f\n', dm_p );
 
         % Create mapping axis %
-        dm_x = linspace( min( dm_n ), max( dm_n ), ( max( dm_n ) - min( dm_n ) ) * 2 );
-        dm_y = linspace( min( dm_c ), max( dm_c ), ( max( dm_c ) - min( dm_c ) ) * 2 );
+        dm_x = linspace( min( dm_n ), max( dm_n ), max( dm_n ) - min( dm_n ) );
+        dm_y = linspace( min( dm_c ), max( dm_c ), max( dm_c ) - min( dm_c ) );
 
         % Create mapping %
         for dm_xx = 1 : length( dm_x ); for dm_yy = 1 : length( dm_y )
@@ -73,7 +73,7 @@
         stem3( dm_n, dm_c, dm_m, 'ko', 'Filled', 'LineWidth', 2, 'LineStyle',':', 'MarkerFaceColor','k', 'MarkerEdgeColor','w' );
 
         % Display model %
-        surf( dm_x, dm_y, dm_f', 'EdgeColor', 'None', 'FaceColor', 'Interp' ); colormap( jet );
+        surf( dm_x, dm_y, dm_f', 'EdgeColor', 'None', 'FaceColor', 'Interp' ); colormap( autumn );
 
         % Set viewport %
         view( [ 180 + 45, 25 ] );
