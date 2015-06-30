@@ -2,7 +2,11 @@
 ## Laboratory of Certification <br /> Research and development for certification
 
 <p align="justify">
-The researches on certification conducted in the Laboratory of Certification of the FOXEL Labs research center is committed to the crucial question of certification of the geopositioned photogrammetric results and their processing chain. The goal of this research is to define and apply a procedures of certification based on well-established land register data of the photogrammtric results attached to earth. The research on certification is the fondation on which FOXEL rely to ensure the quality of its results.
+The researches on certification conducted in the Laboratory of Certification of
+the FOXEL Labs research center are committed to the crucial question of
+certification. Those researches are dedicated to the definition of certification
+procedure for photogrammetric results, geodesic accuracy and also big-data
+management.
 </p>
 
 <p align="justify">
