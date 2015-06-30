@@ -1,7 +1,7 @@
 
 ## Copyright
 
-Laboratory of Certification - Research in geodetic certification <br />
+Laboratory of Certification - Research and development for certification <br />
 This research is part of the FOXEL project <[http://foxel.ch](http://foxel.ch)>.
 
 Copyright (c) 2013-2015 FOXEL SA - [http://foxel.ch](http://foxel.ch)<br />
