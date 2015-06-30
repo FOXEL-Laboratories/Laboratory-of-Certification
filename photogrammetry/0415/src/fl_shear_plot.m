@@ -81,9 +81,9 @@
         plot( flShear(:,1) - flShear(:,4), flShear(:,2) - flShear(:,5), '+', 'Color', [ 255 117 108 ] / 255 );
 
         % Axis configuration %
-        xlabel( 'x [m]' );
-        ylabel( 'y [m]' );
-        axis( [ -1.5 1.5 -1.5 1.5 ], 'Square' );
+        xlabel( 'x [m] (E MN95)' );
+        ylabel( 'y [m] (N MN95)' );
+        axis( [ -1 1 -1 1 ], 'Square' );
 
         % Configure subplot %
         subplot( 1, 2, 2 );
@@ -104,9 +104,9 @@
         plot( flShear(:,1) - flShear(:,4), flShear(:,3) - flShear(:,6), '+', 'Color', [ 255 117 108 ] / 255 );
 
         % Axis configuration %
-        xlabel( 'x [m]' );
-        ylabel( 'z [m]' );
-        axis( [ -1.5 1.5 -1 1 ], 'Square' );
+        xlabel( 'x [m] (E MN95)' );
+        ylabel( 'z [m] (Alt. NF02)' );
+        axis( [ -1 1 -1 1 ], 'Square' );
 
         % Figure exportation in color EPS file %
         print( '-depsc', '-F:12', [ '../dev/images/' flImage '.eps' ] );
